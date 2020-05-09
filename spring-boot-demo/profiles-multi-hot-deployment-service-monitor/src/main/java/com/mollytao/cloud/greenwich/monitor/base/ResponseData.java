@@ -2,41 +2,41 @@ package com.mollytao.cloud.greenwich.monitor.base;
 
 
 public class ResponseData {
-	
-	private Boolean status = true;
-	private int code = 200;
-	private String message = "";
-	private Object data;
 
-	public Boolean getStatus() {
-		return status;
-	}
+    private Boolean status = true;
+    private int code = 200;
+    private String message = "";
+    private Object data;
 
-	public void setStatus(Boolean status) {
-		this.status = status;
-	}
+    public Boolean getStatus() {
+        return status;
+    }
 
-	public int getCode() {
-		return code;
-	}
+    public void setStatus(Boolean status) {
+        this.status = status;
+    }
 
-	public void setCode(int code) {
-		this.code = code;
-	}
+    public int getCode() {
+        return code;
+    }
 
-	public String getMessage() {
-		return message;
-	}
+    public void setCode(int code) {
+        this.code = code;
+    }
 
-	public void setMessage(String message) {
-		this.message = message;
-	}
+    public String getMessage() {
+        return message;
+    }
 
-	public Object getData() {
-		return data;
-	}
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
-	public void setData(Object data) {
-		this.data = data;
-	}
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
+    }
 }

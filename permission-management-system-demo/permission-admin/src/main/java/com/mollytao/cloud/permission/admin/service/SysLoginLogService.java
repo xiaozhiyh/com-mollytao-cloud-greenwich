@@ -5,6 +5,7 @@ import com.mollytao.cloud.permission.core.service.CurdService;
 
 /**
  * 登录日志
+ *
  * @author stephen
  * @date 2020-05-08
  */

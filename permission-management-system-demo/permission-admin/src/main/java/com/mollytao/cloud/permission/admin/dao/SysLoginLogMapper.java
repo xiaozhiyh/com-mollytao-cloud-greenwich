@@ -18,10 +18,10 @@ public interface SysLoginLogMapper {
     int updateByPrimaryKeySelective(SysLoginLog record);
 
     int updateByPrimaryKey(SysLoginLog record);
-    
+
     List<SysLog> findPage();
-    
-    List<SysLog> findPageByUserName(@Param(value="userName") String userName);
-    
-    List<SysLog> findPageByStatus(@Param(value="status") String status);
+
+    List<SysLog> findPageByUserName(@Param(value = "userName") String userName);
+
+    List<SysLog> findPageByStatus(@Param(value = "status") String status);
 }

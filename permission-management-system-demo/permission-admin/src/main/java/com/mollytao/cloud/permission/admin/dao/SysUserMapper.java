@@ -17,12 +17,12 @@ public interface SysUserMapper {
     int updateByPrimaryKeySelective(SysUser record);
 
     int updateByPrimaryKey(SysUser record);
-    
+
     List<SysUser> findPage();
-    
-    SysUser findByName(@Param(value="name") String name);
-    
-	List<SysUser> findPageByName(@Param(value="name") String name);
-	
-	List<SysUser> findPageByNameAndEmail(@Param(value="name") String name, @Param(value="email") String email);
+
+    SysUser findByName(@Param(value = "name") String name);
+
+    List<SysUser> findPageByName(@Param(value = "name") String name);
+
+    List<SysUser> findPageByNameAndEmail(@Param(value = "name") String name, @Param(value = "email") String email);
 }

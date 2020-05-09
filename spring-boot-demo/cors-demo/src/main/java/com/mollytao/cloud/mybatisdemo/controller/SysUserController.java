@@ -12,8 +12,8 @@ public class SysUserController {
 
     @Autowired
     private SysUserService sysUserService;
-    
-    @GetMapping(value="/findAll")
+
+    @GetMapping(value = "/findAll")
     public Object findAll() {
         return sysUserService.findAll();
     }

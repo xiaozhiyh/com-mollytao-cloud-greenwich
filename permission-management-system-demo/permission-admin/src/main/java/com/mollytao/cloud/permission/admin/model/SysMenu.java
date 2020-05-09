@@ -26,93 +26,93 @@ public class SysMenu extends BaseModel {
     private Integer level;
     // 非数据库字段
     private List<SysMenu> children;
-    
-	public Long getParentId() {
-		return parentId;
-	}
 
-	public void setParentId(Long parentId) {
-		this.parentId = parentId;
-	}
+    public Long getParentId() {
+        return parentId;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public void setParentId(Long parentId) {
+        this.parentId = parentId;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getUrl() {
-		return url;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setUrl(String url) {
-		this.url = url;
-	}
+    public String getUrl() {
+        return url;
+    }
 
-	public String getPerms() {
-		return perms;
-	}
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
-	public void setPerms(String perms) {
-		this.perms = perms;
-	}
+    public String getPerms() {
+        return perms;
+    }
 
-	public Integer getType() {
-		return type;
-	}
+    public void setPerms(String perms) {
+        this.perms = perms;
+    }
 
-	public void setType(Integer type) {
-		this.type = type;
-	}
+    public Integer getType() {
+        return type;
+    }
 
-	public String getIcon() {
-		return icon;
-	}
+    public void setType(Integer type) {
+        this.type = type;
+    }
 
-	public void setIcon(String icon) {
-		this.icon = icon;
-	}
+    public String getIcon() {
+        return icon;
+    }
 
-	public Integer getOrderNum() {
-		return orderNum;
-	}
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
 
-	public void setOrderNum(Integer orderNum) {
-		this.orderNum = orderNum;
-	}
+    public Integer getOrderNum() {
+        return orderNum;
+    }
 
-	public Byte getDelFlag() {
-		return delFlag;
-	}
+    public void setOrderNum(Integer orderNum) {
+        this.orderNum = orderNum;
+    }
 
-	public void setDelFlag(Byte delFlag) {
-		this.delFlag = delFlag;
-	}
+    public Byte getDelFlag() {
+        return delFlag;
+    }
 
-	public List<SysMenu> getChildren() {
-		return children;
-	}
+    public void setDelFlag(Byte delFlag) {
+        this.delFlag = delFlag;
+    }
 
-	public void setChildren(List<SysMenu> children) {
-		this.children = children;
-	}
+    public List<SysMenu> getChildren() {
+        return children;
+    }
 
-	public Integer getLevel() {
-		return level;
-	}
+    public void setChildren(List<SysMenu> children) {
+        this.children = children;
+    }
 
-	public void setLevel(Integer level) {
-		this.level = level;
-	}
+    public Integer getLevel() {
+        return level;
+    }
 
-	public String getParentName() {
-		return parentName;
-	}
+    public void setLevel(Integer level) {
+        this.level = level;
+    }
 
-	public void setParentName(String parentName) {
-		this.parentName = parentName;
-	}
-	
+    public String getParentName() {
+        return parentName;
+    }
+
+    public void setParentName(String parentName) {
+        this.parentName = parentName;
+    }
+
 }

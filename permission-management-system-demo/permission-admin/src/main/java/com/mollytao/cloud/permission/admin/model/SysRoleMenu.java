@@ -6,20 +6,20 @@ public class SysRoleMenu extends BaseModel {
 
     private Long menuId;
 
-	public Long getRoleId() {
-		return roleId;
-	}
+    public Long getRoleId() {
+        return roleId;
+    }
 
-	public void setRoleId(Long roleId) {
-		this.roleId = roleId;
-	}
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
+    }
 
-	public Long getMenuId() {
-		return menuId;
-	}
+    public Long getMenuId() {
+        return menuId;
+    }
 
-	public void setMenuId(Long menuId) {
-		this.menuId = menuId;
-	}
+    public void setMenuId(Long menuId) {
+        this.menuId = menuId;
+    }
 
 }

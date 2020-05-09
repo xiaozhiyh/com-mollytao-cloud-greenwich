@@ -13,49 +13,49 @@ import com.mollytao.cloud.permission.core.page.PageRequest;
 import com.mollytao.cloud.permission.core.page.PageResult;
 
 @Service
-public class SysConfigServiceImpl  implements SysConfigService {
+public class SysConfigServiceImpl implements SysConfigService {
 
-	@Autowired
-	private SysConfigMapper sysConfigMapper;
+    @Autowired
+    private SysConfigMapper sysConfigMapper;
 
-	@Override
-	public int save(SysConfig record) {
-		if(record.getId() == null || record.getId() == 0) {
-			return sysConfigMapper.insertSelective(record);
-		}
-		return sysConfigMapper.updateByPrimaryKeySelective(record);
-	}
+    @Override
+    public int save(SysConfig record) {
+        if (record.getId() == null || record.getId() == 0) {
+            return sysConfigMapper.insertSelective(record);
+        }
+        return sysConfigMapper.updateByPrimaryKeySelective(record);
+    }
 
-	@Override
-	public int delete(SysConfig record) {
-		return sysConfigMapper.deleteByPrimaryKey(record.getId());
-	}
+    @Override
+    public int delete(SysConfig record) {
+        return sysConfigMapper.deleteByPrimaryKey(record.getId());
+    }
 
-	@Override
-	public int delete(List<SysConfig> records) {
-		for(SysConfig record:records) {
-			delete(record);
-		}
-		return 1;
-	}
+    @Override
+    public int delete(List<SysConfig> records) {
+        for (SysConfig record : records) {
+            delete(record);
+        }
+        return 1;
+    }
 
-	@Override
-	public SysConfig findById(Long id) {
-		return sysConfigMapper.selectByPrimaryKey(id);
-	}
+    @Override
+    public SysConfig findById(Long id) {
+        return sysConfigMapper.selectByPrimaryKey(id);
+    }
 
-	@Override
-	public PageResult findPage(PageRequest pageRequest) {
-		Object label = pageRequest.getParam("label");
-		if(label != null) {
-			return MybatisPageHelper.findPage(pageRequest, sysConfigMapper, "findPageByLabel", label);
-		}
-		return MybatisPageHelper.findPage(pageRequest, sysConfigMapper);
-	}
+    @Override
+    public PageResult findPage(PageRequest pageRequest) {
+        Object label = pageRequest.getParam("label");
+        if (label != null) {
+            return MybatisPageHelper.findPage(pageRequest, sysConfigMapper, "findPageByLabel", label);
+        }
+        return MybatisPageHelper.findPage(pageRequest, sysConfigMapper);
+    }
 
-	@Override
-	public List<SysConfig> findByLabel(String label) {
-		return sysConfigMapper.findByLabel(label);
-	}
+    @Override
+    public List<SysConfig> findByLabel(String label) {
+        return sysConfigMapper.findByLabel(label);
+    }
 
 }

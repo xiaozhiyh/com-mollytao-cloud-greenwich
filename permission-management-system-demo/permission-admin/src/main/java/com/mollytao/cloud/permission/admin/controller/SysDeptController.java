@@ -15,6 +15,7 @@ import com.mollytao.cloud.permission.core.http.HttpResult;
 
 /**
  * 机构控制器
+ *
  * @author stephen
  * @date 2020-05-08
  */
@@ -22,22 +23,22 @@ import com.mollytao.cloud.permission.core.http.HttpResult;
 @RequestMapping("dept")
 public class SysDeptController {
 
-	@Autowired
-	private SysDeptService sysDeptService;
-	
-	@PostMapping(value="/save")
-	public HttpResult save(@RequestBody SysDept record) {
-		return HttpResult.ok(sysDeptService.save(record));
-	}
+    @Autowired
+    private SysDeptService sysDeptService;
 
-	@PostMapping(value="/delete")
-	public HttpResult delete(@RequestBody List<SysDept> records) {
-		return HttpResult.ok(sysDeptService.delete(records));
-	}
+    @PostMapping(value = "/save")
+    public HttpResult save(@RequestBody SysDept record) {
+        return HttpResult.ok(sysDeptService.save(record));
+    }
 
-	@GetMapping(value="/findTree")
-	public HttpResult findTree() {
-		return HttpResult.ok(sysDeptService.findTree());
-	}
+    @PostMapping(value = "/delete")
+    public HttpResult delete(@RequestBody List<SysDept> records) {
+        return HttpResult.ok(sysDeptService.delete(records));
+    }
+
+    @GetMapping(value = "/findTree")
+    public HttpResult findTree() {
+        return HttpResult.ok(sysDeptService.findTree());
+    }
 
 }

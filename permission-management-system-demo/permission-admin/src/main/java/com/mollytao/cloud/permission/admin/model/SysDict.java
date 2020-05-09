@@ -16,60 +16,60 @@ public class SysDict extends BaseModel {
 
     private Byte delFlag;
 
-	public String getValue() {
-		return value;
-	}
+    public String getValue() {
+        return value;
+    }
 
-	public void setValue(String value) {
-		this.value = value;
-	}
+    public void setValue(String value) {
+        this.value = value;
+    }
 
-	public String getLabel() {
-		return label;
-	}
+    public String getLabel() {
+        return label;
+    }
 
-	public void setLabel(String label) {
-		this.label = label;
-	}
+    public void setLabel(String label) {
+        this.label = label;
+    }
 
-	public String getType() {
-		return type;
-	}
+    public String getType() {
+        return type;
+    }
 
-	public void setType(String type) {
-		this.type = type;
-	}
+    public void setType(String type) {
+        this.type = type;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-	public Long getSort() {
-		return sort;
-	}
+    public Long getSort() {
+        return sort;
+    }
 
-	public void setSort(Long sort) {
-		this.sort = sort;
-	}
+    public void setSort(Long sort) {
+        this.sort = sort;
+    }
 
-	public String getRemarks() {
-		return remarks;
-	}
+    public String getRemarks() {
+        return remarks;
+    }
 
-	public void setRemarks(String remarks) {
-		this.remarks = remarks;
-	}
+    public void setRemarks(String remarks) {
+        this.remarks = remarks;
+    }
 
-	public Byte getDelFlag() {
-		return delFlag;
-	}
+    public Byte getDelFlag() {
+        return delFlag;
+    }
 
-	public void setDelFlag(Byte delFlag) {
-		this.delFlag = delFlag;
-	}
+    public void setDelFlag(Byte delFlag) {
+        this.delFlag = delFlag;
+    }
 
 }

@@ -15,23 +15,24 @@ import com.mollytao.cloud.permission.core.page.PageRequest;
 
 /**
  * 登录日志控制器
+ *
  * @author stephen
  * @date 2020-05-08
  */
 @RestController
-@RequestMapping("loginlog")
+@RequestMapping("loginLog")
 public class SysLoginLogController {
 
-	@Autowired
-	private SysLoginLogService sysLoginLogService;
+    @Autowired
+    private SysLoginLogService sysLoginLogService;
 
-	@PostMapping(value="/findPage")
-	public HttpResult findPage(@RequestBody PageRequest pageRequest) {
-		return HttpResult.ok(sysLoginLogService.findPage(pageRequest));
-	}
-	
-	@PostMapping(value="/delete")
-	public HttpResult delete(@RequestBody List<SysLoginLog> records) {
-		return HttpResult.ok(sysLoginLogService.delete(records));
-	}
+    @PostMapping(value = "/findPage")
+    public HttpResult findPage(@RequestBody PageRequest pageRequest) {
+        return HttpResult.ok(sysLoginLogService.findPage(pageRequest));
+    }
+
+    @PostMapping(value = "/delete")
+    public HttpResult delete(@RequestBody List<SysLoginLog> records) {
+        return HttpResult.ok(sysLoginLogService.delete(records));
+    }
 }

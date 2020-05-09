@@ -17,35 +17,35 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
  */
 @Configuration
 public class AsyncTaskExecutePool implements AsyncConfigurer {
-	private Logger logger = LoggerFactory.getLogger(AsyncTaskExecutePool.class);
-	
-	@Autowired
-	private TaskThreadPoolConfig config;
+    private Logger logger = LoggerFactory.getLogger(AsyncTaskExecutePool.class);
 
-	@Override
-	public Executor getAsyncExecutor() {
-		ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-		executor.setCorePoolSize(config.getCorePoolSize());
-		executor.setMaxPoolSize(config.getMaxPoolSize());
-		executor.setQueueCapacity(config.getQueueCapacity());
-		executor.setKeepAliveSeconds(config.getKeepAliveSeconds());
-		executor.setThreadNamePrefix(config.getThreadNamePrefix());
-		// 配置线程池的拒绝策略
-		executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
-		executor.initialize();
-		return executor;
-	}
+    @Autowired
+    private TaskThreadPoolConfig config;
 
-	@Override
-	public AsyncUncaughtExceptionHandler getAsyncUncaughtExceptionHandler() {
-		// 异步任务中异常处理
-		return new AsyncUncaughtExceptionHandler() {
-			@Override
-			public void handleUncaughtException(Throwable arg0, Method arg1, Object... arg2) {
+    @Override
+    public Executor getAsyncExecutor() {
+        ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+        executor.setCorePoolSize(config.getCorePoolSize());
+        executor.setMaxPoolSize(config.getMaxPoolSize());
+        executor.setQueueCapacity(config.getQueueCapacity());
+        executor.setKeepAliveSeconds(config.getKeepAliveSeconds());
+        executor.setThreadNamePrefix(config.getThreadNamePrefix());
+        // 配置线程池的拒绝策略
+        executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
+        executor.initialize();
+        return executor;
+    }
 
-				logger.error("==========================" + arg0.getMessage() + "=======================", arg0);
-				logger.error("exception method:" + arg1.getName());
-			}
-		};
-	}
+    @Override
+    public AsyncUncaughtExceptionHandler getAsyncUncaughtExceptionHandler() {
+        // 异步任务中异常处理
+        return new AsyncUncaughtExceptionHandler() {
+            @Override
+            public void handleUncaughtException(Throwable arg0, Method arg1, Object... arg2) {
+
+                logger.error("==========================" + arg0.getMessage() + "=======================", arg0);
+                logger.error("exception method:" + arg1.getName());
+            }
+        };
+    }
 }

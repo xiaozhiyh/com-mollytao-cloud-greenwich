@@ -17,12 +17,12 @@ public interface SysRoleMapper {
     int updateByPrimaryKeySelective(SysRole record);
 
     int updateByPrimaryKey(SysRole record);
-    
+
     List<SysRole> findPage();
 
-	List<SysRole> findAll();
-	
-	List<SysRole> findPageByName(@Param(value="name") String name);
-	
-	List<SysRole> findByName(@Param(value="name") String name);
+    List<SysRole> findAll();
+
+    List<SysRole> findPageByName(@Param(value = "name") String name);
+
+    List<SysRole> findByName(@Param(value = "name") String name);
 }

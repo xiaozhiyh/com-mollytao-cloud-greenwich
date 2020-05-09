@@ -12,24 +12,25 @@ import javax.sql.DataSource;
 
 /**
  * Mybatis配置
+ *
  * @author stephen
  * @date Jan 11, 2019
  */
 @Configuration
 @MapperScan("com.mollytao.cloud.mybatisdemo.**.dao")    // 扫描DAO
 public class MybatisConfig {
-  @Autowired
-  private DataSource dataSource;
+    @Autowired
+    private DataSource dataSource;
 
-  @Bean
-  public SqlSessionFactory sqlSessionFactory() throws Exception {
-    SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
-    sessionFactory.setDataSource(dataSource);
-    sessionFactory.setTypeAliasesPackage("com.mollytao.cloud.mybatisdemo.**.model");    // 扫描Model
-    
-    PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-    sessionFactory.setMapperLocations(resolver.getResources("classpath*:**/xml/*.xml"));    // 扫描映射文件
-    
-    return sessionFactory.getObject();
-  }
+    @Bean
+    public SqlSessionFactory sqlSessionFactory() throws Exception {
+        SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
+        sessionFactory.setDataSource(dataSource);
+        sessionFactory.setTypeAliasesPackage("com.mollytao.cloud.mybatisdemo.**.model");    // 扫描Model
+
+        PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+        sessionFactory.setMapperLocations(resolver.getResources("classpath*:**/xml/*.xml"));    // 扫描映射文件
+
+        return sessionFactory.getObject();
+    }
 }

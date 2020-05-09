@@ -7,15 +7,17 @@ import com.mollytao.cloud.permission.core.service.CurdService;
 
 /**
  * 字典管理
+ *
  * @author stephen
  * @date 2020-05-08
  */
 public interface SysDictService extends CurdService<SysDict> {
 
-	/**
-	 * 根据名称查询
-	 * @param label
-	 * @return
-	 */
-	List<SysDict> findByLabel(String label);
+    /**
+     * 根据名称查询
+     *
+     * @param label
+     * @return
+     */
+    List<SysDict> findByLabel(String label);
 }

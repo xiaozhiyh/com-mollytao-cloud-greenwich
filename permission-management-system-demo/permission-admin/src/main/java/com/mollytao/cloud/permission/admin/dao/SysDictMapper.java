@@ -17,10 +17,10 @@ public interface SysDictMapper {
     int updateByPrimaryKeySelective(SysDict record);
 
     int updateByPrimaryKey(SysDict record);
-    
-    List<SysDict> findPage();
-    
-    List<SysDict> findPageByLabel(@Param(value="label") String label);
 
-    List<SysDict> findByLabel(@Param(value="label") String label);
+    List<SysDict> findPage();
+
+    List<SysDict> findPageByLabel(@Param(value = "label") String label);
+
+    List<SysDict> findByLabel(@Param(value = "label") String label);
 }

@@ -16,9 +16,10 @@ public interface SysUserMapper {
     int updateByPrimaryKeySelective(SysUser record);
 
     int updateByPrimaryKey(SysUser record);
-    
+
     /**
      * 查询全部
+     *
      * @return
      */
     List<SysUser> findAll();

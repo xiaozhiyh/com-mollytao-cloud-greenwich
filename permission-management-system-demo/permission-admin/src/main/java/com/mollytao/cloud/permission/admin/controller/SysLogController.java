@@ -15,6 +15,7 @@ import com.mollytao.cloud.permission.core.page.PageRequest;
 
 /**
  * 操作日志控制器
+ *
  * @author stephen
  * @date 2020-05-08
  */
@@ -22,16 +23,16 @@ import com.mollytao.cloud.permission.core.page.PageRequest;
 @RequestMapping("log")
 public class SysLogController {
 
-	@Autowired
-	private SysLogService sysLogService;
+    @Autowired
+    private SysLogService sysLogService;
 
-	@PostMapping(value="/findPage")
-	public HttpResult findPage(@RequestBody PageRequest pageRequest) {
-		return HttpResult.ok(sysLogService.findPage(pageRequest));
-	}
-	
-	@PostMapping(value="/delete")
-	public HttpResult delete(@RequestBody List<SysLog> records) {
-		return HttpResult.ok(sysLogService.delete(records));
-	}
+    @PostMapping(value = "/findPage")
+    public HttpResult findPage(@RequestBody PageRequest pageRequest) {
+        return HttpResult.ok(sysLogService.findPage(pageRequest));
+    }
+
+    @PostMapping(value = "/delete")
+    public HttpResult delete(@RequestBody List<SysLog> records) {
+        return HttpResult.ok(sysLogService.delete(records));
+    }
 }

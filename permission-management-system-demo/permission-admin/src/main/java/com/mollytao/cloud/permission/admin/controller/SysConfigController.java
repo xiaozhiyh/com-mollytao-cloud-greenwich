@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 系统配置控制器
+ *
  * @author stephen
  * @date 2020-05-08
  */
@@ -23,26 +24,26 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("config")
 public class SysConfigController {
 
-	@Autowired
-	private SysConfigService sysConfigService;
-	
-	@PostMapping(value="/save")
-	public HttpResult save(@RequestBody SysConfig record) {
-		return HttpResult.ok(sysConfigService.save(record));
-	}
+    @Autowired
+    private SysConfigService sysConfigService;
 
-	@PostMapping(value="/delete")
-	public HttpResult delete(@RequestBody List<SysConfig> records) {
-		return HttpResult.ok(sysConfigService.delete(records));
-	}
+    @PostMapping(value = "/save")
+    public HttpResult save(@RequestBody SysConfig record) {
+        return HttpResult.ok(sysConfigService.save(record));
+    }
 
-	@PostMapping(value="/findPage")
-	public HttpResult findPage(@RequestBody PageRequest pageRequest) {
-		return HttpResult.ok(sysConfigService.findPage(pageRequest));
-	}
-	
-	@GetMapping(value="/findByLabel")
-	public HttpResult findByLabel(@RequestParam String label) {
-		return HttpResult.ok(sysConfigService.findByLabel(label));
-	}
+    @PostMapping(value = "/delete")
+    public HttpResult delete(@RequestBody List<SysConfig> records) {
+        return HttpResult.ok(sysConfigService.delete(records));
+    }
+
+    @PostMapping(value = "/findPage")
+    public HttpResult findPage(@RequestBody PageRequest pageRequest) {
+        return HttpResult.ok(sysConfigService.findPage(pageRequest));
+    }
+
+    @GetMapping(value = "/findByLabel")
+    public HttpResult findByLabel(@RequestParam String label) {
+        return HttpResult.ok(sysConfigService.findByLabel(label));
+    }
 }

@@ -12,6 +12,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * Swagger配置
+ *
  * @author stephen
  * @date Jan 11, 2019
  */
@@ -20,12 +21,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerConfig {
 
     @Bean
-    public Docket createRestApi(){
+    public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select()
-        		.apis(RequestHandlerSelectors.any()).paths(PathSelectors.any()).build();
+                .apis(RequestHandlerSelectors.any()).paths(PathSelectors.any()).build();
     }
 
-    private ApiInfo apiInfo(){
+    private ApiInfo apiInfo() {
         return new ApiInfoBuilder().build();
     }
 

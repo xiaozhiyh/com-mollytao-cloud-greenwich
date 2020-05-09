@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Map;
 
 /**
- *
  * @author Administrator
  */
 @Component
@@ -19,6 +18,7 @@ public class UserEndpoint {
 
     /**
      * 必须加此注解，否则将读取不到自定义的actuator节点
+     *
      * @return
      */
     @ReadOperation

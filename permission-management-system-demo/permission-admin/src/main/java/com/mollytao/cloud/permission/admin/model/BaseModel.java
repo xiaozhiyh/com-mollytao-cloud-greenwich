@@ -4,13 +4,14 @@ import java.util.Date;
 
 /**
  * 基础模型
+ *
  * @author stephen
  * @date Sep 13, 2018
  */
 public class BaseModel {
 
-	private Long id;
-	
+    private Long id;
+
     private String createBy;
 
     private Date createTime;
@@ -19,44 +20,44 @@ public class BaseModel {
 
     private Date lastUpdateTime;
 
-	public Long getId() {
-		return id;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public String getCreateBy() {
-		return createBy;
-	}
+    public String getCreateBy() {
+        return createBy;
+    }
 
-	public void setCreateBy(String createBy) {
-		this.createBy = createBy;
-	}
+    public void setCreateBy(String createBy) {
+        this.createBy = createBy;
+    }
 
-	public Date getCreateTime() {
-		return createTime;
-	}
+    public Date getCreateTime() {
+        return createTime;
+    }
 
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
 
-	public String getLastUpdateBy() {
-		return lastUpdateBy;
-	}
+    public String getLastUpdateBy() {
+        return lastUpdateBy;
+    }
 
-	public void setLastUpdateBy(String lastUpdateBy) {
-		this.lastUpdateBy = lastUpdateBy;
-	}
+    public void setLastUpdateBy(String lastUpdateBy) {
+        this.lastUpdateBy = lastUpdateBy;
+    }
 
-	public Date getLastUpdateTime() {
-		return lastUpdateTime;
-	}
+    public Date getLastUpdateTime() {
+        return lastUpdateTime;
+    }
 
-	public void setLastUpdateTime(Date lastUpdateTime) {
-		this.lastUpdateTime = lastUpdateTime;
-	}
-    
+    public void setLastUpdateTime(Date lastUpdateTime) {
+        this.lastUpdateTime = lastUpdateTime;
+    }
+
 }

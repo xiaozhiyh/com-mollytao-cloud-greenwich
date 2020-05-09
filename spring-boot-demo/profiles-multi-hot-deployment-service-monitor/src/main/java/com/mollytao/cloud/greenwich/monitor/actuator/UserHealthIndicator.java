@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 /**
  * 如果只是需要对应用的健康状态增加一些其他维度的数据，可以通过继承AbstractHealthIndicator来实现自己的业务逻辑
  * 是在框架自带的health端点中进行扩展
+ *
  * @author Administrator
  */
 @Component
