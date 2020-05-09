@@ -17,6 +17,10 @@ import java.util.Map;
 @Endpoint(id = "user")
 public class UserEndpoint {
 
+    /**
+     * 必须加此注解，否则将读取不到自定义的actuator节点
+     * @return
+     */
     @ReadOperation
     public List<Map<String, Object>> health() {
         List<Map<String, Object>> list = new ArrayList<>();
