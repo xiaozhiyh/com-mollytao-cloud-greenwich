@@ -1,7 +1,7 @@
 package com.mollytao.cloud.permission.admin.util;
 
 import com.mollytao.cloud.permission.admin.security.GrantedAuthorityImpl;
-import com.mollytao.cloud.permission.admin.security.JwtAuthenticatioToken;
+import com.mollytao.cloud.permission.admin.security.JctAuthenticationToken;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -118,7 +118,7 @@ public class JwtTokenUtils implements Serializable {
                         authorities.add(new GrantedAuthorityImpl((String) ((Map) object).get("authority")));
                     }
                 }
-                authentication = new JwtAuthenticatioToken(username, null, authorities, token);
+                authentication = new JctAuthenticationToken(username, null, authorities, token);
             } else {
                 if (validateToken(token, SecurityUtils.getUsername())) {
                     // 如果上下文中Authentication非空，且请求令牌合法，直接返回当前登录认证信息

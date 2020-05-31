@@ -3,7 +3,7 @@ package com.mollytao.cloud.permission.admin.controller;
 import com.google.code.kaptcha.Constants;
 import com.google.code.kaptcha.Producer;
 import com.mollytao.cloud.permission.admin.model.SysUser;
-import com.mollytao.cloud.permission.admin.security.JwtAuthenticatioToken;
+import com.mollytao.cloud.permission.admin.security.JctAuthenticationToken;
 import com.mollytao.cloud.permission.admin.service.SysUserService;
 import com.mollytao.cloud.permission.admin.util.PasswordUtils;
 import com.mollytao.cloud.permission.admin.util.SecurityUtils;
@@ -85,7 +85,7 @@ public class SysLoginController {
             return HttpResult.error("账号已被锁定,请联系管理员");
         }
         // 系统登录认证
-        JwtAuthenticatioToken token = SecurityUtils.login(request, username, password, authenticationManager);
+        JctAuthenticationToken token = SecurityUtils.login(request, username, password, authenticationManager);
         return HttpResult.ok(token);
     }
 }

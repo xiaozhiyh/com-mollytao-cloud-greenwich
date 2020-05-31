@@ -11,22 +11,22 @@ import java.util.Collection;
  * @author Louis
  * @date Jan 14, 2019
  */
-public class JwtAuthenticatioToken extends UsernamePasswordAuthenticationToken {
+public class JctAuthenticationToken extends UsernamePasswordAuthenticationToken {
 
     private static final long serialVersionUID = 1L;
 
     private String token;
 
-    public JwtAuthenticatioToken(Object principal, Object credentials) {
+    public JctAuthenticationToken(Object principal, Object credentials) {
         super(principal, credentials);
     }
 
-    public JwtAuthenticatioToken(Object principal, Object credentials, String token) {
+    public JctAuthenticationToken(Object principal, Object credentials, String token) {
         super(principal, credentials);
         this.token = token;
     }
 
-    public JwtAuthenticatioToken(Object principal, Object credentials, Collection<? extends GrantedAuthority> authorities, String token) {
+    public JctAuthenticationToken(Object principal, Object credentials, Collection<? extends GrantedAuthority> authorities, String token) {
         super(principal, credentials, authorities);
         this.token = token;
     }

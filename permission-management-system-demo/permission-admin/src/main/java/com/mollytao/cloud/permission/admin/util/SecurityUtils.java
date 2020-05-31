@@ -1,6 +1,6 @@
 package com.mollytao.cloud.permission.admin.util;
 
-import com.mollytao.cloud.permission.admin.security.JwtAuthenticatioToken;
+import com.mollytao.cloud.permission.admin.security.JctAuthenticationToken;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -27,8 +27,8 @@ public class SecurityUtils {
      * @param authenticationManager
      * @return
      */
-    public static JwtAuthenticatioToken login(HttpServletRequest request, String username, String password, AuthenticationManager authenticationManager) {
-        JwtAuthenticatioToken token = new JwtAuthenticatioToken(username, password);
+    public static JctAuthenticationToken login(HttpServletRequest request, String username, String password, AuthenticationManager authenticationManager) {
+        JctAuthenticationToken token = new JctAuthenticationToken(username, password);
         token.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
         // 执行登录认证过程
         Authentication authentication = authenticationManager.authenticate(token);

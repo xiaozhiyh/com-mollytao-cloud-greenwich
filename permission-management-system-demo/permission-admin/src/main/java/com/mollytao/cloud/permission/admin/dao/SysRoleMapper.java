@@ -4,7 +4,9 @@ import java.util.List;
 
 import com.mollytao.cloud.permission.admin.model.SysRole;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface SysRoleMapper {
     int deleteByPrimaryKey(Long id);
 
