@@ -1,4 +1,4 @@
-package com.mollytao.cloud.permissiondatabackup;
+package com.mollytao.cloud.permission.data.backup;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
