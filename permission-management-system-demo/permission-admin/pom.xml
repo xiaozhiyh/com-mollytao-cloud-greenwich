@@ -129,6 +129,11 @@
             <version>0.9.1</version>
         </dependency>
         <!-- spring-security end -->
+
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
