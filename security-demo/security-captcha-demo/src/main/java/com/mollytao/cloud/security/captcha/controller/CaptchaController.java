@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
+/**
+ * @author Administrator
+ */
 @Controller
 public class CaptchaController {
 

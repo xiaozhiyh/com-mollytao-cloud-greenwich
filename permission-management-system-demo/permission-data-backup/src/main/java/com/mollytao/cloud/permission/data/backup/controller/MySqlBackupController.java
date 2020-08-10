@@ -137,6 +137,9 @@ public class MySqlBackupController {
     }
 
 	@ApiOperation(value = "备份删除接口", notes = "通过备份还原管理界面删除数据备份版本")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "name", value = "备份的数据版本名称", required = true, paramType = "query")
+    })
 	@ApiResponses({
 			@ApiResponse(code = 200, message = "请求成功"),
 			@ApiResponse(code = 500, message = "删除失败")

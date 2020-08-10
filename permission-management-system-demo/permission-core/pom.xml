@@ -18,14 +18,14 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <pagehelper.spring.version>1.2.5</pagehelper.spring.version>
+        <pagehelper.spring.version>1.2.13</pagehelper.spring.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
-            <version>1.2.5</version>
+            <version>${pagehelper.spring.version}</version>
         </dependency>
         <dependency>
             <groupId>com.mollytao.cloud</groupId>

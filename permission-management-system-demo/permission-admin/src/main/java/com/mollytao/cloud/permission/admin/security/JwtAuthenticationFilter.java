@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Security-2 登录认真过滤器。
+ * Security-2 登录认证过滤器。
  * 负责登录认证时检查并生成令牌保存到上下文，接口权限认证过程时，系统从上下文获取令牌校验接口访问权限
  *
  * @author Louis

@@ -20,7 +20,7 @@ public class MybatisPageHelper {
 	 * 分页查询, 约定查询方法名为 “findPage” 
 	 * @param pageRequest 分页请求
 	 * @param mapper Dao对象，MyBatis的 Mapper	
-	 * @return
+	 * @return PageResult
 	 */
 	public static PageResult findPage(PageRequest pageRequest, Object mapper) {
 		return findPage(pageRequest, mapper, findPage);
@@ -32,7 +32,7 @@ public class MybatisPageHelper {
 	 * @param mapper Dao对象，MyBatis的 Mapper	
 	 * @param queryMethodName 要分页的查询方法名
 	 * @param args 方法参数
-	 * @return
+	 * @return PageResult
 	 */
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static PageResult findPage(PageRequest pageRequest, Object mapper, String queryMethodName, Object... args) {
@@ -49,7 +49,7 @@ public class MybatisPageHelper {
 	 * 将分页信息封装到统一的接口
 	 * @param pageRequest 
 	 * @param pageInfo
-	 * @return
+	 * @return PageResult
 	 */
 	private static PageResult getPageResult(PageRequest pageRequest, PageInfo<?> pageInfo) {
 		PageResult pageResult = new PageResult();

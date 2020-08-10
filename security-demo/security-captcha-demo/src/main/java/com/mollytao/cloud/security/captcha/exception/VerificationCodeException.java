@@ -2,6 +2,9 @@ package com.mollytao.cloud.security.captcha.exception;
 
 import org.springframework.security.core.AuthenticationException;
 
+/**
+ * @author Administrator
+ */
 public class VerificationCodeException extends AuthenticationException {
 
     public VerificationCodeException() {

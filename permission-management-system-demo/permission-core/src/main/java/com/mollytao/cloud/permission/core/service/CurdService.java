@@ -17,7 +17,7 @@ public interface CurdService<T> {
      * 保存操作
      *
      * @param record
-     * @return
+     * @return int
      */
     int save(T record);
 
@@ -25,7 +25,7 @@ public interface CurdService<T> {
      * 删除操作
      *
      * @param record
-     * @return
+     * @return int
      */
     int delete(T record);
 
@@ -33,6 +33,7 @@ public interface CurdService<T> {
      * 批量删除操作
      *
      * @param records
+     * @return int
      */
     int delete(List<T> records);
 
