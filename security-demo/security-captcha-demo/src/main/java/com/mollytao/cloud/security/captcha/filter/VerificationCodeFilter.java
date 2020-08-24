@@ -13,14 +13,19 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+/**
+ * @author Administrator
+ */
 public class VerificationCodeFilter extends OncePerRequestFilter {
 
     private AuthenticationFailureHandler authenticationFailureHandler = new SecurityAuthenticationFailureHandler();
 
+    public static final String LOGIN_URI = "/login";
+
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
         // 非登录请求不校验验证码
-        if (!"/login".equals(httpServletRequest.getRequestURI())) {
+        if (!LOGIN_URI.equals(httpServletRequest.getRequestURI())) {
             filterChain.doFilter(httpServletRequest, httpServletResponse);
         } else {
             try {

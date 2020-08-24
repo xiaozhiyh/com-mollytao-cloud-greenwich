@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * @author Administrator
+ */
 public class SecurityAuthenticationFailureHandler extends ExceptionMappingAuthenticationFailureHandler {
 
     @Override

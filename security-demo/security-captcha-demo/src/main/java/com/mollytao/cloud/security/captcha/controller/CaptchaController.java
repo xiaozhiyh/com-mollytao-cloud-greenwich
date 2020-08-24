@@ -21,6 +21,12 @@ public class CaptchaController {
     @Autowired
     private Producer captchaProducer;
 
+    /**
+     * kaptcha 请勿用在生产
+     * @param request
+     * @param response
+     * @throws IOException
+     */
     @GetMapping("/captcha.jpg")
     public void getCaptcha(HttpServletRequest request, HttpServletResponse response) throws IOException {
         // 设置内容类型
