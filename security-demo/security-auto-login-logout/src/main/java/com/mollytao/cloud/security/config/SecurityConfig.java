@@ -45,6 +45,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()
                 .permitAll()
                 .and()
+                // 自动登录
                 .rememberMe()
                 .userDetailsService(userDetailsService)
                 // 1. 散列加密方案
@@ -54,6 +55,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 // 7天有效期
                 .tokenValiditySeconds(60 * 60 * 24 * 7)
                 .and()
+                // 注销登录
                 .logout()
                 .logoutUrl("/myLogout")
                 // 注销成功，重定向到该路径下
